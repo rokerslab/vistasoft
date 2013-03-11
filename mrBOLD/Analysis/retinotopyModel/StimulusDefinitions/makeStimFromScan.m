@@ -179,7 +179,8 @@ end
 % new filters can be made with the name rmfilter_*
 % they should be saved with the other filters in
 %    '.../retinotopyModel/FilterDefinitions' 
-I.images = eval(['rmfilter_' params.stim(id).imFilter '(I.images, display);']);
+
+I.images = eval(['rmfilter_' lower(params.stim(id).imFilter) '(I.images, display);']);
 
 end
 

@@ -109,6 +109,9 @@ end
 % Different fitting strategies
 %-----------------------------------
 switch lower(wSearch)
+    case {'0','refit'}
+        view = rmFinalFit(view,params);
+        
     case {'1','coarse','grid fit'}
         fprintf(1,'[%s]:Brute force fitting of bank of pRFs (coarse fit).\n',mfilename);
         view = rmGridFit(view,params);
